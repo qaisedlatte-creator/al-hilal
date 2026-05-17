@@ -106,11 +106,20 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="site-shell py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div className="site-shell py-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-[11px] text-white/25">&copy; {year} Al Hilal Printing &amp; Advertising. All rights reserved.</p>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-5">
           <Link href="/privacy" className="text-[11px] text-white/25 hover:text-white/50 transition-colors">Privacy</Link>
           <Link href="/terms" className="text-[11px] text-white/25 hover:text-white/50 transition-colors">Terms</Link>
+          <span className="w-px h-3 bg-white/10" />
+          <a
+            href="https://webbes.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/20 hover:text-white/50 transition-colors"
+          >
+            Designed by Webbes.in
+          </a>
         </div>
       </div>
     </footer>

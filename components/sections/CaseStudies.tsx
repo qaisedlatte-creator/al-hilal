@@ -44,7 +44,7 @@ export default function CaseStudies({ limit }: CaseStudiesProps) {
                 {/* Logo area — clean white/paper bg, no dark overlay */}
                 <div className="flex items-center justify-center px-8 py-7 bg-white border-b border-border">
                   {cs.logo ? (
-                    <div className="relative h-12 w-36 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300">
+                    <div className="relative h-12 w-36 opacity-85 group-hover:opacity-100 transition-all duration-300">
                       <Image
                         src={cs.logo}
                         alt={cs.client}

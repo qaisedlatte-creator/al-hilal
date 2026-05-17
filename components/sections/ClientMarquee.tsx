@@ -26,7 +26,7 @@ export default function ClientMarquee() {
             >
               {client.logo ? (
                 <div
-                  className="relative grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  className="relative opacity-80 hover:opacity-100 transition-all duration-300"
                   style={{ width: "130px", height: "56px", position: "relative" }}
                 >
                   <Image
