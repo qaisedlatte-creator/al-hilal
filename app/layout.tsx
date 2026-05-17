@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import SmoothScroll, { ScrollProgress } from "@/components/layout/SmoothScroll";
 import { COMPANY, SITE_URL } from "@/lib/site";
 
 const playfair = Playfair_Display({
@@ -73,9 +74,12 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} antialiased`}
     >
       <body className="bg-ivory text-charcoal font-sans overflow-x-hidden" style={{ WebkitFontSmoothing: "antialiased" }}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+        <ScrollProgress />
+        <SmoothScroll>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
