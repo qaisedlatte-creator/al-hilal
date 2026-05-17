@@ -44,11 +44,6 @@ main {
   min-height: 100vh;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -59,25 +54,47 @@ img {
   color: var(--color-navy);
 }
 
+/* ─── Keyframes (must be outside any @layer so they are globally available) ─── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 @layer base {
   * {
     box-sizing: border-box;
     border-color: var(--color-border);
   }
 
-  /*
-   * DO NOT set heading/p colors here — it causes dark text on dark bg sections.
-   * Colors are set via Tailwind utility classes (text-charcoal, text-ivory, etc.)
-   */
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: var(--font-playfair), serif;
     font-weight: 700;
     letter-spacing: -0.025em;
+    /* No color here — set by utility classes so dark-section text works correctly */
   }
 
   p {
     margin: 0;
+    /* No color here — inherited from body or set by utility classes */
+  }
+
+  /*
+   * KEY FIX: Put 'a { color: inherit }' in @layer base so that text-color
+   * utility classes (in @layer utilities) can override it.
+   * Previously this was unlayered, giving it HIGHER priority than all utilities,
+   * which made every Link component text invisible on dark backgrounds.
+   */
+  a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   input,
@@ -85,22 +102,13 @@ img {
   select,
   button {
     font: inherit;
-    /* Prevent iOS auto-zoom on focus (needs ≥16px) */
-    font-size: max(16px, 1em);
   }
 
-  /* Prevent iOS tap highlight flash */
-  a, button {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-
-  /* Fix iOS momentum scrolling + prevent bounce that causes shaking */
   html {
     overscroll-behavior: none;
   }
 
-  /* Prevent iOS scaling/zoom reflow on input focus */
+  /* Prevent iOS auto-zoom on input focus */
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -117,7 +125,6 @@ img {
     margin-inline: auto;
   }
 
-  /* Tighter sections — 40% less than before */
   .page-section {
     padding-block: 4rem;
   }
@@ -128,7 +135,6 @@ img {
     }
   }
 
-  /* Reduced by ~40% from previous oversized values */
   .display-hero {
     font-size: clamp(2.5rem, 6vw, 4.75rem);
     line-height: 1.0;
@@ -174,11 +180,11 @@ img {
     text-wrap: balance;
   }
 
-  /* Marquee overflow hide */
+  /* Marquee — references @keyframes marquee defined above */
   .marquee-track {
     display: flex;
     width: max-content;
-    animation: marquee 28s linear infinite;
+    animation: marquee 30s linear infinite;
   }
 
   .marquee-track:hover {

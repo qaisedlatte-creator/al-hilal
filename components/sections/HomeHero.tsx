@@ -34,12 +34,12 @@ export default function HomeHero() {
           transition={{ duration: 0.5, delay: 0.05 }}
           className="flex items-center gap-3 mb-9"
         >
-          <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-ivory/25">
+          <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white/25">
             <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" priority />
           </div>
           <div>
-            <span className="font-display font-bold text-ivory text-sm tracking-tight">AL HILAL</span>
-            <span className="text-[9px] uppercase tracking-[0.16em] text-ivory/40 block mt-0.5">
+            <span className="font-display font-bold text-white text-sm tracking-tight">AL HILAL</span>
+            <span className="text-[9px] uppercase tracking-[0.16em] text-white/40 block mt-0.5">
               Printing &amp; Branding · Sharjah, UAE
             </span>
           </div>
@@ -47,7 +47,7 @@ export default function HomeHero() {
 
         {/* Headline */}
         <motion.h1
-          className="font-display font-bold text-ivory mb-5 max-w-3xl"
+          className="font-display font-bold text-white mb-5 max-w-3xl"
           style={{ fontSize: "clamp(2.25rem, 5.5vw, 4.25rem)", lineHeight: 1.05, letterSpacing: "-0.025em" }}
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function HomeHero() {
 
         {/* Services subtitle — ivory not dark */}
         <motion.p
-          className="text-ivory/50 text-sm font-medium uppercase tracking-[0.12em] mb-6"
+          className="text-white/50 text-sm font-medium uppercase tracking-[0.12em] mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -70,7 +70,7 @@ export default function HomeHero() {
 
         {/* Description */}
         <motion.p
-          className="text-ivory/65 max-w-lg mb-10 leading-relaxed"
+          className="text-white/65 max-w-lg mb-10 leading-relaxed"
           style={{ fontSize: "clamp(0.9375rem, 2vw, 1.0625rem)" }}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ export default function HomeHero() {
           </Link>
           <Link
             href="/gallery"
-            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-ivory/25 text-ivory text-sm font-medium hover:border-ivory/50 hover:bg-ivory/10 transition-all"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/25 text-white text-sm font-medium hover:border-white/50 hover:bg-ivory/10 transition-all"
           >
             See Our Work
           </Link>
@@ -114,7 +114,7 @@ export default function HomeHero() {
 
         {/* Bottom trust bar — ALL IVORY TEXT on navy bg */}
         <motion.div
-          className="flex flex-wrap items-center gap-5 pt-7 border-t border-ivory/15"
+          className="flex flex-wrap items-center gap-5 pt-7 border-t border-white/15"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.45 }}
@@ -122,26 +122,26 @@ export default function HomeHero() {
           <div className="flex items-center gap-2.5">
             <span className="font-display font-bold text-gold text-xl">Est.</span>
             <div>
-              <span className="font-display font-bold text-ivory text-xl">1999</span>
-              <p className="text-[10px] text-ivory/40 uppercase tracking-[0.1em] mt-0.5">Sharjah, UAE</p>
+              <span className="font-display font-bold text-white text-xl">1999</span>
+              <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] mt-0.5">Sharjah, UAE</p>
             </div>
           </div>
           <div className="w-px h-7 bg-ivory/15" />
           <a href={`tel:${COMPANY.phone}`} className="group">
-            <span className="font-semibold text-ivory text-sm group-hover:text-gold transition-colors block">
+            <span className="font-semibold text-white text-sm group-hover:text-gold transition-colors block">
               {COMPANY.phone}
             </span>
-            <p className="text-[10px] text-ivory/40 uppercase tracking-[0.1em]">Call us</p>
+            <p className="text-[10px] text-white/40 uppercase tracking-[0.1em]">Call us</p>
           </a>
           <div className="w-px h-7 bg-ivory/15 hidden sm:block" />
-          <a href={`mailto:${COMPANY.email}`} className="text-sm text-ivory/50 hover:text-ivory transition-colors hidden sm:block">
+          <a href={`mailto:${COMPANY.email}`} className="text-sm text-white/50 hover:text-white transition-colors hidden sm:block">
             {COMPANY.email}
           </a>
         </motion.div>
       </div>
 
       {/* Services ticker */}
-      <div className="relative z-10 border-t border-ivory/10 py-3 overflow-hidden bg-navy/50 backdrop-blur-sm">
+      <div className="relative z-10 border-t border-white/10 py-3 overflow-hidden bg-navy/50 backdrop-blur-sm">
         <div className="marquee-track gap-10">
           {[
             "Offset Printing", "Business Cards", "Brochures", "Flyers", "Stickers",
@@ -152,7 +152,7 @@ export default function HomeHero() {
             "Rubber Stamps", "Signage", "Acrylic Signs", "Window Films", "Hoardings",
           ].map((s, i) => (
             <div key={i} className="flex items-center gap-10 shrink-0">
-              <span className="text-[10px] uppercase tracking-[0.16em] text-ivory/35 font-semibold whitespace-nowrap">{s}</span>
+              <span className="text-[10px] uppercase tracking-[0.16em] text-white/35 font-semibold whitespace-nowrap">{s}</span>
               <span className="w-1 h-1 rounded-full bg-gold/30 shrink-0" />
             </div>
           ))}

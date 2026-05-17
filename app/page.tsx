@@ -21,7 +21,7 @@ export default function HomePage() {
       <ClientMarquee />
       <ServicesGrid />
       <GalleryPreview />
-      <CaseStudies />
+      <CaseStudies limit={3} />
       <ProcessTeaser />
       <HomeCTA />
     </>

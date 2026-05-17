@@ -56,7 +56,7 @@ export default function GalleryPreview() {
         </StaggerContainer>
 
         <FadeIn delay={0.3} className="mt-8 text-center">
-          <Link href="/gallery" className="inline-flex items-center gap-2 px-7 py-3.5 bg-navy text-ivory text-sm font-semibold hover:bg-navy-mid transition-colors">
+          <Link href="/gallery" className="inline-flex items-center gap-2 px-7 py-3.5 bg-navy text-white text-sm font-semibold hover:bg-navy-mid transition-colors">
             View All Work
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
               <path d="M2.5 6.5h8M7 3l3.5 3.5L7 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

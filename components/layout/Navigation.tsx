@@ -90,7 +90,7 @@ export default function Navigation() {
                         <span className="text-[11px] text-steel mt-0.5">{s.desc}</span>
                       </Link>
                     ))}
-                    <Link href="/services" className="flex items-center gap-1.5 px-4 py-3 bg-navy text-ivory text-[12px] font-semibold uppercase tracking-wider hover:bg-navy-mid transition-colors">
+                    <Link href="/services" className="flex items-center gap-1.5 px-4 py-3 bg-navy text-white text-[12px] font-semibold uppercase tracking-wider hover:bg-navy-mid transition-colors">
                       All Services →
                     </Link>
                   </motion.div>
@@ -126,7 +126,7 @@ export default function Navigation() {
             </a>
             <Link
               href="/get-a-quote"
-              className="flex items-center gap-1.5 px-5 py-2.5 bg-navy text-ivory text-[13px] font-semibold hover:bg-navy-mid transition-colors"
+              className="flex items-center gap-1.5 px-5 py-2.5 bg-navy text-white text-[13px] font-semibold hover:bg-navy-mid transition-colors"
             >
               Get a Quote
             </Link>
@@ -155,14 +155,14 @@ export default function Navigation() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[200] bg-navy flex flex-col"
           >
-            <div className="flex items-center justify-between px-5 border-b border-ivory/10" style={{ height: "72px" }}>
+            <div className="flex items-center justify-between px-5 border-b border-white/10" style={{ height: "72px" }}>
               <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3">
-                <div className="relative w-9 h-9 rounded-full overflow-hidden border border-ivory/20">
+                <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/20">
                   <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" />
                 </div>
-                <span className="font-display font-bold text-ivory text-base tracking-tight">AL HILAL</span>
+                <span className="font-display font-bold text-white text-base tracking-tight">AL HILAL</span>
               </Link>
-              <button onClick={() => setMobileOpen(false)} className="text-ivory/60 hover:text-ivory p-2" aria-label="Close">
+              <button onClick={() => setMobileOpen(false)} className="text-white/60 hover:text-white p-2" aria-label="Close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
@@ -170,23 +170,23 @@ export default function Navigation() {
             </div>
 
             <nav className="flex-1 overflow-y-auto px-5 py-6 flex flex-col gap-0.5">
-              <p className="text-[9px] uppercase tracking-[0.16em] text-ivory/30 font-semibold mb-3">Services</p>
+              <p className="text-[9px] uppercase tracking-[0.16em] text-white/30 font-semibold mb-3">Services</p>
               {SERVICES.map((s) => (
-                <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="py-3.5 text-ivory/80 hover:text-ivory text-[15px] font-medium border-b border-ivory/8 last:border-0 transition-colors flex items-center justify-between">
+                <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="py-3.5 text-white/80 hover:text-white text-[15px] font-medium border-b border-white/8 last:border-0 transition-colors flex items-center justify-between">
                   {s.label}
-                  <span className="text-ivory/20 text-xs">→</span>
+                  <span className="text-white/20 text-xs">→</span>
                 </Link>
               ))}
-              <div className="mt-6 pt-5 border-t border-ivory/10 flex flex-col gap-0.5">
+              <div className="mt-6 pt-5 border-t border-white/10 flex flex-col gap-0.5">
                 {[{ href: "/services", label: "All Services" }, { href: "/gallery", label: "Gallery" }, { href: "/about", label: "About" }, { href: "/blog", label: "Blog" }, { href: "/faq", label: "FAQ" }, { href: "/contact", label: "Contact" }].map((l) => (
-                  <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="py-3 text-ivory text-xl font-display font-bold hover:text-gold transition-colors">
+                  <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="py-3 text-white text-xl font-display font-bold hover:text-gold transition-colors">
                     {l.label}
                   </Link>
                 ))}
               </div>
             </nav>
 
-            <div className="px-5 py-5 border-t border-ivory/10 flex flex-col gap-3">
+            <div className="px-5 py-5 border-t border-white/10 flex flex-col gap-3">
               <Link href="/get-a-quote" onClick={() => setMobileOpen(false)} className="w-full bg-gold text-navy text-center py-4 font-bold text-sm tracking-wide">
                 Get a Free Quote
               </Link>
@@ -195,9 +195,9 @@ export default function Navigation() {
                 WhatsApp Us
               </a>
               <div className="flex items-center justify-center gap-4 pt-1">
-                <a href={`tel:${COMPANY.phone}`} className="text-xs text-ivory/40 hover:text-ivory transition-colors">{COMPANY.phone}</a>
+                <a href={`tel:${COMPANY.phone}`} className="text-xs text-white/40 hover:text-white transition-colors">{COMPANY.phone}</a>
                 <span className="w-px h-3 bg-ivory/10" />
-                <a href={`mailto:${COMPANY.email}`} className="text-xs text-ivory/40 hover:text-ivory transition-colors">{COMPANY.email}</a>
+                <a href={`mailto:${COMPANY.email}`} className="text-xs text-white/40 hover:text-white transition-colors">{COMPANY.email}</a>
               </div>
             </div>
           </motion.div>

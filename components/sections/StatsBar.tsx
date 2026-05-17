@@ -24,10 +24,10 @@ export default function StatsBar() {
               viewport={{ once: true }}
               className="flex flex-col gap-1.5 md:px-8 first:pl-0 last:pr-0"
             >
-              <span className="font-display font-bold text-ivory leading-none" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", letterSpacing: "-0.03em" }}>
+              <span className="font-display font-bold text-white leading-none" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", letterSpacing: "-0.03em" }}>
                 {stat.value}
               </span>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-ivory/50">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/50">
                 {stat.label}
               </span>
             </motion.div>
