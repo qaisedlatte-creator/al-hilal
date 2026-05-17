@@ -3,6 +3,7 @@ import HomeHero from "@/components/sections/HomeHero";
 import ClientMarquee from "@/components/sections/ClientMarquee";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import GalleryPreview from "@/components/sections/GalleryPreview";
+import CaseStudies from "@/components/sections/CaseStudies";
 import ProcessTeaser from "@/components/sections/ProcessTeaser";
 import HomeCTA from "@/components/sections/HomeCTA";
 
@@ -20,6 +21,7 @@ export default function HomePage() {
       <ClientMarquee />
       <ServicesGrid />
       <GalleryPreview />
+      <CaseStudies />
       <ProcessTeaser />
       <HomeCTA />
     </>

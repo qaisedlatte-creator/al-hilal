@@ -30,36 +30,37 @@ export default function ServicesGrid() {
             <StaggerItem key={service.slug}>
               <Link href={`/services/${service.slug}`} className="group block overflow-hidden border border-border hover:border-navy/30 hover:shadow-card transition-all duration-300 bg-paper">
                 {/* Real image */}
-                <div className="relative h-44 overflow-hidden bg-surface">
+                <div className="relative h-48 overflow-hidden bg-surface">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-navy/30 group-hover:bg-navy/50 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-navy/35 group-hover:bg-navy/50 transition-colors duration-300" />
+                  {/* Badge — white text on dark overlay */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-2.5 py-1 bg-ivory/90 text-navy text-[10px] font-bold uppercase tracking-[0.1em]">
+                    <span className="px-2.5 py-1 bg-navy/80 text-ivory text-[10px] font-bold uppercase tracking-[0.12em]">
                       {service.shortTitle}
                     </span>
                   </div>
                 </div>
 
-                {/* Content */}
+                {/* Content — light background, dark text is correct here */}
                 <div className="p-5">
-                  <h3 className="font-display font-bold text-xl text-charcoal group-hover:text-navy transition-colors mb-2">
+                  <h3 className="font-display font-bold text-xl text-charcoal group-hover:text-navy transition-colors mb-1.5">
                     {service.title}
                   </h3>
                   <p className="text-[13px] text-steel leading-relaxed mb-4">{service.tagline}</p>
-                  {/* Sub-items preview */}
+                  {/* Item tags — ivory bg, charcoal text: good contrast */}
                   <div className="flex flex-wrap gap-1.5">
                     {service.items.slice(0, 4).map((item) => (
-                      <span key={item} className="text-[10px] font-medium text-steel/60 bg-surface px-2 py-0.5 border border-border">
+                      <span key={item} className="text-[10px] font-semibold text-charcoal bg-surface px-2.5 py-1 border border-border">
                         {item}
                       </span>
                     ))}
                     {service.items.length > 4 && (
-                      <span className="text-[10px] font-medium text-navy/60 px-2 py-0.5">
+                      <span className="text-[10px] font-semibold text-navy px-2.5 py-1">
                         +{service.items.length - 4} more
                       </span>
                     )}

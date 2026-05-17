@@ -27,7 +27,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4.5rem; /* 72px nav height */
 }
 
 body {
@@ -65,22 +65,19 @@ img {
     border-color: var(--color-border);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  /*
+   * DO NOT set heading/p colors here — it causes dark text on dark bg sections.
+   * Colors are set via Tailwind utility classes (text-charcoal, text-ivory, etc.)
+   */
+  h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: var(--font-playfair), serif;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: var(--color-charcoal);
   }
 
   p {
     margin: 0;
-    color: var(--color-steel);
   }
 
   input,
@@ -88,6 +85,29 @@ img {
   select,
   button {
     font: inherit;
+    /* Prevent iOS auto-zoom on focus (needs ≥16px) */
+    font-size: max(16px, 1em);
+  }
+
+  /* Prevent iOS tap highlight flash */
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Fix iOS momentum scrolling + prevent bounce that causes shaking */
+  html {
+    overscroll-behavior: none;
+  }
+
+  /* Prevent iOS scaling/zoom reflow on input focus */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
   }
 }
 

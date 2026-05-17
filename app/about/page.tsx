@@ -37,23 +37,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Real about-us image */}
-      <div className="relative h-64 md:h-80 overflow-hidden bg-surface">
-        <Image
-          src="/images/services/about-us.jpg"
-          alt="Al Hilal Print Press facility"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-navy/30" />
-        <div className="absolute bottom-6 left-0 right-0 site-shell">
+      {/* Brand bar instead of compressed image */}
+      <div className="bg-navy py-8">
+        <div className="site-shell flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <div className="flex items-center gap-4">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-ivory/30">
+            <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-ivory/20">
               <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" />
             </div>
             <div>
-              <p className="font-display font-bold text-ivory text-lg">AL HILAL Print Press</p>
-              <p className="text-ivory/60 text-sm">{COMPANY.address}</p>
+              <p className="font-display font-bold text-ivory text-xl">AL HILAL</p>
+              <p className="text-[10px] uppercase tracking-[0.16em] text-ivory/40 mt-0.5">Print Press · Sharjah, UAE · Est. 1999</p>
+            </div>
+          </div>
+          <div className="hidden sm:block w-px h-10 bg-ivory/10 ml-4" />
+          <div className="flex gap-6 sm:ml-4">
+            <div>
+              <p className="font-display font-bold text-gold text-xl">Est.</p>
+              <p className="font-display font-bold text-ivory text-2xl -mt-1">1999</p>
+            </div>
+            <div className="w-px h-10 bg-ivory/10" />
+            <div className="flex flex-col gap-1">
+              <a href={`tel:${COMPANY.phone}`} className="text-ivory/70 text-sm hover:text-ivory transition-colors">{COMPANY.phone}</a>
+              <a href={`mailto:${COMPANY.email}`} className="text-ivory/40 text-xs hover:text-ivory/70 transition-colors">{COMPANY.email}</a>
             </div>
           </div>
         </div>

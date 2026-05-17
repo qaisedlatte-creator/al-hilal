@@ -72,7 +72,7 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${dmSans.variable} antialiased`}
     >
-      <body className="bg-ivory text-charcoal font-sans overflow-x-hidden">
+      <body className="bg-ivory text-charcoal font-sans overflow-x-hidden" style={{ WebkitFontSmoothing: "antialiased" }}>
         <Navigation />
         <main>{children}</main>
         <Footer />

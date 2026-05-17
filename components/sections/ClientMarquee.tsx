@@ -5,31 +5,36 @@ const ALL_CLIENTS = [...clients, ...clients];
 
 export default function ClientMarquee() {
   return (
-    <section className="py-10 bg-ivory border-y border-border overflow-hidden">
-      <div className="site-shell mb-6">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-steel/50 text-center">
-          Trusted by businesses across Sharjah &amp; UAE
+    <section className="py-14 bg-ivory border-y border-border overflow-hidden">
+      {/* Header */}
+      <div className="site-shell mb-8 text-center">
+        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-steel/50">
+          Trusted by leading businesses across Sharjah &amp; UAE
         </p>
       </div>
 
+      {/* Scrolling track */}
       <div className="relative overflow-hidden">
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-ivory to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-ivory to-transparent pointer-events-none" />
+        {/* Fade masks */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-ivory to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-ivory to-transparent" />
 
-        <div className="flex overflow-hidden">
+        <div className="flex overflow-hidden select-none">
           <div
             className="flex shrink-0"
-            style={{ animation: "marquee 35s linear infinite", width: "max-content" }}
+            style={{
+              animation: "marquee 40s linear infinite",
+              width: "max-content",
+            }}
           >
             {ALL_CLIENTS.map((client, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center px-8 border-r border-border shrink-0"
-                style={{ minWidth: "160px", height: "72px" }}
+                className="flex items-center justify-center shrink-0 px-10 border-r border-border"
+                style={{ minWidth: "180px", height: "96px" }}
               >
                 {client.logo ? (
-                  <div className="relative w-24 h-10 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                  <div className="relative w-32 h-14 grayscale hover:grayscale-0 transition-all duration-400 opacity-50 hover:opacity-100">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -38,11 +43,11 @@ export default function ClientMarquee() {
                     />
                   </div>
                 ) : (
-                  <div className="flex flex-col items-center gap-0.5">
-                    <span className="font-display font-bold text-steel/50 text-sm whitespace-nowrap hover:text-charcoal transition-colors">
+                  <div className="flex flex-col items-center gap-1">
+                    <span className="font-display font-bold text-steel/40 text-base whitespace-nowrap hover:text-charcoal transition-colors">
                       {client.name}
                     </span>
-                    <span className="text-[9px] uppercase tracking-[0.1em] text-steel/30">{client.category}</span>
+                    <span className="text-[9px] uppercase tracking-[0.12em] text-steel/25 font-semibold">{client.category}</span>
                   </div>
                 )}
               </div>
