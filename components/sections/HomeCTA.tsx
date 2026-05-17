@@ -1,58 +1,91 @@
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY } from "@/lib/site";
 import FadeIn from "@/components/animations/FadeIn";
 
 export default function HomeCTA() {
   return (
-    <section className="bg-ink py-20 md:py-28">
-      <div className="site-shell">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
-          <FadeIn className="max-w-2xl">
-            <h2
-              className="font-display font-bold text-paper"
-              style={{
-                fontSize: "clamp(2.5rem, 6vw, 5rem)",
-                lineHeight: 1.0,
-                letterSpacing: "-0.03em",
-              }}
-            >
+    <section className="bg-navy py-16 md:py-20 overflow-hidden relative">
+      {/* Decorative element */}
+      <div className="absolute right-0 top-0 bottom-0 w-80 opacity-5 pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg width="320" height="320" viewBox="0 0 320 320" fill="none">
+            <circle cx="320" cy="160" r="200" stroke="white" strokeWidth="1"/>
+            <circle cx="320" cy="160" r="140" stroke="white" strokeWidth="1"/>
+            <circle cx="320" cy="160" r="80" stroke="white" strokeWidth="1"/>
+          </svg>
+        </div>
+      </div>
+
+      <div className="site-shell relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+          {/* Left */}
+          <FadeIn>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-ivory/20">
+                <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" />
+              </div>
+              <div>
+                <p className="font-display font-bold text-ivory text-sm">AL HILAL</p>
+                <p className="text-[9px] uppercase tracking-[0.14em] text-ivory/30">Print &amp; Branding · Sharjah</p>
+              </div>
+            </div>
+            <h2 className="display-title font-display font-bold text-ivory mb-4">
               Ready to start
               <br />
               your project?
             </h2>
-            <p className="body-large text-paper/50 mt-5 max-w-md">
+            <p className="body-large text-ivory/50 max-w-md">
               Tell us what you need. Most quotations returned within 4 business hours.
+              No obligation — just a fast, accurate quote.
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.15} className="flex flex-col gap-4 shrink-0">
-            <Link
-              href="/get-a-quote"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-green text-paper text-sm font-medium tracking-wide hover:bg-green-hover transition-colors"
-            >
-              Get a Quote
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-            <a
-              href={`https://wa.me/${COMPANY.whatsapp.replace(/\s/g, "")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-paper/20 text-paper text-sm font-medium tracking-wide hover:bg-paper/10 transition-colors"
-            >
-              <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor" className="opacity-70">
-                <path d="M9 0a9 9 0 0 0-7.8 13.5L0 18l4.65-1.2A9 9 0 1 0 9 0zm0 16.5a7.5 7.5 0 0 1-3.9-1.1l-.27-.165-2.82.735.75-2.745-.18-.285A7.5 7.5 0 1 1 9 16.5zm4.11-5.565c-.225-.12-1.335-.66-1.545-.735-.21-.075-.36-.12-.51.12-.15.24-.585.735-.72.885-.135.15-.27.165-.495.045-.225-.12-.945-.345-1.8-1.11-.665-.59-1.11-1.32-1.245-1.545-.135-.225-.015-.345.1-.465.105-.105.225-.27.345-.405.12-.135.165-.225.24-.375.075-.15.045-.285-.015-.405-.06-.12-.51-1.23-.7-1.68-.18-.435-.375-.375-.51-.39h-.435c-.15 0-.39.06-.6.285-.21.225-.78.765-.78 1.86s.8 2.16.915 2.31c.12.15 1.575 2.4 3.81 3.36.535.225.945.36 1.27.465.54.165 1.02.135 1.41.09.435-.06 1.335-.54 1.53-1.065.195-.525.195-.975.135-1.065-.06-.09-.21-.15-.435-.27z"/>
-              </svg>
-              WhatsApp Us
-            </a>
-            <div className="pt-2 space-y-1">
-              <a href={`tel:${COMPANY.phone}`} className="block text-xs text-paper/30 hover:text-paper/60 transition-colors">
-                {COMPANY.phone}
+          {/* Right — actions */}
+          <FadeIn delay={0.12}>
+            <div className="flex flex-col gap-4">
+              <Link
+                href="/get-a-quote"
+                className="flex items-center justify-between gap-4 px-6 py-5 bg-gold hover:bg-gold/90 transition-colors group"
+              >
+                <div>
+                  <p className="text-navy font-bold text-base">Get a Free Quote</p>
+                  <p className="text-navy/60 text-sm">Response within 4 hours</p>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-navy group-hover:translate-x-1 transition-transform">
+                  <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+
+              <a
+                href={`https://wa.me/${COMPANY.whatsapp.replace(/\s/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between gap-4 px-6 py-5 border border-ivory/15 hover:border-ivory/30 transition-colors group"
+              >
+                <div>
+                  <p className="text-ivory font-medium text-base flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor" className="text-[#25D366]">
+                      <path d="M9 0a9 9 0 0 0-7.8 13.5L0 18l4.65-1.2A9 9 0 1 0 9 0z"/>
+                    </svg>
+                    WhatsApp Us
+                  </p>
+                  <p className="text-ivory/40 text-sm ml-6">{COMPANY.whatsapp}</p>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-ivory/30 group-hover:translate-x-1 transition-transform">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </a>
-              <a href={`mailto:${COMPANY.email}`} className="block text-xs text-paper/30 hover:text-paper/60 transition-colors">
-                {COMPANY.email}
-              </a>
+
+              <div className="flex items-center gap-6 pt-2 pl-1">
+                <a href={`tel:${COMPANY.phone}`} className="text-[12px] text-ivory/30 hover:text-ivory/60 transition-colors">
+                  {COMPANY.phone}
+                </a>
+                <span className="w-px h-3 bg-ivory/10" />
+                <a href={`mailto:${COMPANY.email}`} className="text-[12px] text-ivory/30 hover:text-ivory/60 transition-colors">
+                  {COMPANY.email}
+                </a>
+              </div>
             </div>
           </FadeIn>
         </div>

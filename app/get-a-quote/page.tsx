@@ -1,40 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { COMPANY } from "@/lib/site";
 import SectionLabel from "@/components/ui/SectionLabel";
 import FadeIn from "@/components/animations/FadeIn";
 
 const SERVICE_OPTIONS = [
-  "Offset Printing",
-  "Digital Printing",
-  "Large Format Printing",
-  "Corporate Gifts & Branded Merchandise",
-  "Uniforms & Workwear",
-  "Rubber Stamps",
-  "Signage & Advertising",
-  "Multiple Services",
+  "Offset Printing", "Digital Printing", "Large Format Printing",
+  "Corporate Gifts & Branded Merchandise", "Uniforms & Workwear",
+  "Rubber Stamps", "Signage & Advertising", "Multiple Services",
 ];
 
 const TIMELINE_OPTIONS = [
-  "Standard (5–7 working days)",
-  "Rush (2–3 working days)",
-  "Next day",
-  "I need advice on timing",
+  "Standard (5–7 working days)", "Rush (2–3 working days)",
+  "Next day", "I need advice on timing",
 ];
 
 export default function GetAQuotePage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
-  const [form, setForm] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    service: "",
-    quantity: "",
-    timeline: "",
-    description: "",
-  });
+  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", service: "", quantity: "", timeline: "", description: "" });
 
   const update = (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm({ ...form, [field]: e.target.value });
@@ -42,34 +27,30 @@ export default function GetAQuotePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1200));
+    await new Promise((r) => setTimeout(r, 1000));
     setStatus("sent");
   };
 
-  const inputClass =
-    "border border-border px-4 py-3 text-sm text-ink bg-paper focus:outline-none focus:border-green transition-colors w-full";
-  const labelClass = "text-xs font-medium uppercase tracking-[0.1em] text-muted mb-2 block";
+  const inputClass = "w-full border border-border bg-ivory px-4 py-3 text-sm text-charcoal placeholder:text-steel/40 focus:outline-none focus:border-navy transition-colors";
+  const labelClass = "text-[10px] font-semibold uppercase tracking-[0.12em] text-steel mb-2 block";
 
   return (
     <>
-      <section className="bg-paper pt-36 pb-16 md:pt-44 md:pb-20">
-        <div className="site-shell">
+      <section className="bg-ivory pt-32 pb-12 md:pt-40 md:pb-16">
+        <div className="site-shell grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
           <FadeIn>
             <SectionLabel>Get a Quote</SectionLabel>
-            <h1
-              className="font-display font-bold text-ink mt-2"
-              style={{ fontSize: "clamp(3rem, 8vw, 6rem)", lineHeight: 0.95, letterSpacing: "-0.03em" }}
-            >
+            <h1 className="display-hero font-display font-bold text-charcoal mt-3">
               Tell us what
               <br />
-              you need.
+              <span className="text-navy">you need.</span>
             </h1>
           </FadeIn>
-          <FadeIn delay={0.15} className="mt-6 max-w-xl">
-            <p className="body-large text-muted">
-              Fill in the form below and we&rsquo;ll return a detailed quotation within 4 business hours.
-              Prefer to speak directly?{" "}
-              <a href={`https://wa.me/${COMPANY.whatsapp.replace(/\s/g, "")}`} className="text-ink underline hover:text-green transition-colors" target="_blank" rel="noopener noreferrer">
+          <FadeIn delay={0.1}>
+            <p className="body-large text-steel">
+              Fill in the form and we&rsquo;ll return a detailed quotation within 4 business hours.
+              No obligation. Prefer instant response?{" "}
+              <a href={`https://wa.me/${COMPANY.whatsapp.replace(/\s/g, "")}`} className="text-charcoal underline hover:text-navy transition-colors" target="_blank" rel="noopener noreferrer">
                 Message us on WhatsApp.
               </a>
             </p>
@@ -77,55 +58,30 @@ export default function GetAQuotePage() {
         </div>
       </section>
 
-      <section className="page-section bg-paper">
-        <div className="site-shell grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16 lg:gap-24 items-start">
-          {/* Form */}
+      <section className="page-section bg-ivory">
+        <div className="site-shell grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 items-start">
           <FadeIn>
             {status === "sent" ? (
-              <div className="py-16 flex flex-col gap-6 items-start">
+              <div className="py-12 flex flex-col gap-5">
                 <div className="w-14 h-14 bg-green/10 rounded-full flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12l5 5L20 7" stroke="#1E3A2A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M5 11l4 4 8-8" stroke="#1B5E3B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h2 className="font-display font-bold text-3xl text-ink">Quote request received.</h2>
-                <p className="text-muted body-large max-w-md">
-                  Thank you for your enquiry. Our production team will review your brief and return a detailed quotation within 4 business hours.
-                </p>
-                <p className="text-muted text-sm">
-                  Need to speak to someone now? Call us on{" "}
-                  <a href={`tel:${COMPANY.phone}`} className="text-ink underline">{COMPANY.phone}</a>
-                  {" "}or{" "}
-                  <a href={`https://wa.me/${COMPANY.whatsapp.replace(/\s/g, "")}`} className="text-ink underline" target="_blank" rel="noopener noreferrer">
-                    WhatsApp us.
-                  </a>
-                </p>
+                <h2 className="font-display font-bold text-2xl text-charcoal">Quote request received.</h2>
+                <p className="text-steel body-large max-w-md">Our production team will review your brief and return a detailed quotation within 4 business hours.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={labelClass}>Your Name *</label>
-                    <input type="text" required value={form.name} onChange={update("name")} className={inputClass} placeholder="Full name" />
-                  </div>
-                  <div>
-                    <label className={labelClass}>Company</label>
-                    <input type="text" value={form.company} onChange={update("company")} className={inputClass} placeholder="Company name" />
-                  </div>
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div><label className={labelClass}>Name *</label><input type="text" required value={form.name} onChange={update("name")} className={inputClass} placeholder="Full name" /></div>
+                  <div><label className={labelClass}>Company</label><input type="text" value={form.company} onChange={update("company")} className={inputClass} placeholder="Company name" /></div>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className={labelClass}>Email Address *</label>
-                    <input type="email" required value={form.email} onChange={update("email")} className={inputClass} placeholder="you@company.com" />
-                  </div>
-                  <div>
-                    <label className={labelClass}>Phone / WhatsApp</label>
-                    <input type="tel" value={form.phone} onChange={update("phone")} className={inputClass} placeholder="+971 XX XXX XXXX" />
-                  </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div><label className={labelClass}>Email *</label><input type="email" required value={form.email} onChange={update("email")} className={inputClass} placeholder="you@company.com" /></div>
+                  <div><label className={labelClass}>Phone / WhatsApp</label><input type="tel" value={form.phone} onChange={update("phone")} className={inputClass} placeholder="+971 XX XXX XXXX" /></div>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className={labelClass}>Service Required *</label>
                     <select required value={form.service} onChange={update("service")} className={inputClass}>
@@ -133,94 +89,69 @@ export default function GetAQuotePage() {
                       {SERVICE_OPTIONS.map((s) => <option key={s}>{s}</option>)}
                     </select>
                   </div>
-                  <div>
-                    <label className={labelClass}>Approximate Quantity</label>
-                    <input type="text" value={form.quantity} onChange={update("quantity")} className={inputClass} placeholder="e.g. 500 brochures, 3 banners" />
-                  </div>
+                  <div><label className={labelClass}>Quantity / Size</label><input type="text" value={form.quantity} onChange={update("quantity")} className={inputClass} placeholder="e.g. 500 brochures, 3 banners" /></div>
                 </div>
-
                 <div>
-                  <label className={labelClass}>Required Timeline</label>
+                  <label className={labelClass}>Timeline</label>
                   <select value={form.timeline} onChange={update("timeline")} className={inputClass}>
                     <option value="">Select timeline…</option>
                     {TIMELINE_OPTIONS.map((t) => <option key={t}>{t}</option>)}
                   </select>
                 </div>
-
                 <div>
                   <label className={labelClass}>Project Description *</label>
-                  <textarea
-                    required
-                    rows={7}
-                    value={form.description}
-                    onChange={update("description")}
-                    className={`${inputClass} resize-none`}
-                    placeholder="Please describe your project in detail — format, size, colours, materials, finishing, and any specific requirements. The more detail you provide, the more accurate your quotation will be."
-                  />
+                  <textarea required rows={6} value={form.description} onChange={update("description")} className={`${inputClass} resize-none`} placeholder="Describe your project — format, size, colours, materials, finishing, and any specific requirements. More detail = more accurate quote." />
                 </div>
-
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    disabled={status === "sending"}
-                    className="flex items-center gap-2 px-8 py-4 bg-green text-paper text-sm font-medium tracking-wide hover:bg-green-hover transition-colors disabled:opacity-60"
-                  >
-                    {status === "sending" ? "Submitting…" : "Submit Quote Request"}
-                    {status !== "sending" && (
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    )}
+                <div>
+                  <button type="submit" disabled={status === "sending"} className="flex items-center gap-2 px-7 py-3.5 bg-navy text-ivory text-sm font-semibold hover:bg-navy-mid transition-colors disabled:opacity-60">
+                    {status === "sending" ? "Submitting…" : "Submit Quote Request →"}
                   </button>
-                  <p className="mt-3 text-xs text-muted">
-                    Response within 4 business hours. No obligation.
-                  </p>
+                  <p className="mt-3 text-[11px] text-steel">Response within 4 business hours. No obligation.</p>
                 </div>
               </form>
             )}
           </FadeIn>
 
-          {/* Sidebar — trust signals */}
-          <FadeIn delay={0.15} className="flex flex-col gap-6 lg:pt-2">
-            <div className="border-t-2 border-green pt-6">
-              <h3 className="font-display font-bold text-lg text-ink mb-2">Why Al Hilal?</h3>
-              <ul className="flex flex-col gap-3 mt-4">
+          {/* Sidebar */}
+          <FadeIn delay={0.15} className="flex flex-col gap-5">
+            <div className="bg-navy p-6">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="relative w-9 h-9 rounded-full overflow-hidden border border-ivory/20">
+                  <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" />
+                </div>
+                <div>
+                  <p className="font-display font-bold text-ivory text-sm">AL HILAL</p>
+                  <p className="text-[9px] text-ivory/30 uppercase tracking-[0.12em]">Est. 1999 · Sharjah</p>
+                </div>
+              </div>
+              <ul className="flex flex-col gap-3">
                 {[
                   "25+ years of production experience",
                   "ISO-calibrated colour management",
-                  "In-house finishing and fabrication",
+                  "In-house finishing & fabrication",
                   "UAE-wide delivery and installation",
-                  "Dedicated account manager on every project",
+                  "Dedicated account manager",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green shrink-0" />
+                  <li key={item} className="flex items-start gap-2.5 text-[12px] text-ivory/50">
+                    <span className="mt-1 w-1 h-1 rounded-full bg-gold shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="border-t border-border pt-6">
-              <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted mb-3">Prefer to call?</p>
-              <a href={`tel:${COMPANY.phone}`} className="font-display font-bold text-xl text-ink hover:text-green transition-colors block">
-                {COMPANY.phone}
-              </a>
+            <div className="p-5 border border-border">
+              <p className="label text-steel mb-3">Prefer to call?</p>
+              <a href={`tel:${COMPANY.phone}`} className="font-display font-bold text-xl text-charcoal hover:text-navy transition-colors">{COMPANY.phone}</a>
             </div>
 
-            <div className="border-t border-border pt-6">
-              <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted mb-3">WhatsApp</p>
-              <a
-                href={`https://wa.me/${COMPANY.whatsapp.replace(/\s/g, "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 border border-border text-sm font-medium text-ink hover:border-green hover:text-green transition-colors"
-              >
-                <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor" className="text-[#25D366]">
-                  <path d="M9 0a9 9 0 0 0-7.8 13.5L0 18l4.65-1.2A9 9 0 1 0 9 0zm0 16.5a7.5 7.5 0 0 1-3.9-1.1l-.27-.165-2.82.735.75-2.745-.18-.285A7.5 7.5 0 1 1 9 16.5z"/>
-                </svg>
-                Message us on WhatsApp
-              </a>
-            </div>
+            <a href={`https://wa.me/${COMPANY.whatsapp.replace(/\s/g, "")}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 px-5 py-4 bg-[#25D366] text-white group hover:bg-[#1DAA53] transition-colors">
+              <div>
+                <p className="font-semibold text-sm">WhatsApp Us</p>
+                <p className="text-[11px] text-white/70 mt-0.5">{COMPANY.whatsapp}</p>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 18 18" fill="currentColor"><path d="M9 0a9 9 0 0 0-7.8 13.5L0 18l4.65-1.2A9 9 0 1 0 9 0z"/></svg>
+            </a>
           </FadeIn>
         </div>
       </section>

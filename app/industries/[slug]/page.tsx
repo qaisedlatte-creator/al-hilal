@@ -30,80 +30,73 @@ export default async function IndustryPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-paper pt-36 pb-20 md:pt-44 md:pb-28">
+      <section className="bg-ivory pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="site-shell">
-          <FadeIn className="flex items-center gap-3 mb-8">
-            <Link href="/industries" className="text-xs font-medium uppercase tracking-[0.1em] text-muted hover:text-ink transition-colors flex items-center gap-1.5">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M10 6H2M5 3L2 6l3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
+          <FadeIn className="flex items-center gap-2 mb-8">
+            <Link href="/industries" className="text-[11px] uppercase tracking-[0.1em] text-steel hover:text-navy transition-colors flex items-center gap-1.5">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M8 5H2M4 3L2 5l2 2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
               All Industries
             </Link>
           </FadeIn>
           <FadeIn>
             <SectionLabel>Industry</SectionLabel>
-            <h1
-              className="font-display font-bold text-ink mt-2"
-              style={{ fontSize: "clamp(3rem, 8vw, 6.5rem)", lineHeight: 0.95, letterSpacing: "-0.03em" }}
-            >
-              {industry.title}
-            </h1>
-            <p className="mt-4 font-display text-green font-medium" style={{ fontSize: "clamp(1.25rem, 3vw, 2rem)" }}>
+            <h1 className="display-hero font-display font-bold text-charcoal mt-3">{industry.title}</h1>
+            <p className="mt-3 font-display font-medium text-navy" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)" }}>
               {industry.tagline}
             </p>
           </FadeIn>
-          <FadeIn delay={0.15} className="mt-8 max-w-2xl">
-            <p className="body-large text-muted">{industry.description}</p>
+          <FadeIn delay={0.15} className="mt-6 max-w-2xl">
+            <p className="body-large text-steel">{industry.description}</p>
           </FadeIn>
         </div>
       </section>
 
       <section className="page-section bg-surface">
-        <div className="site-shell grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="site-shell grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           <FadeIn>
             <SectionLabel>Our Understanding</SectionLabel>
-            <p className="body-large text-muted mt-4 leading-relaxed">{industry.longDescription}</p>
+            <h2 className="display-subtitle font-display font-bold text-charcoal mt-3 mb-6">25 years of sector experience</h2>
+            <p className="body-large text-steel leading-relaxed">{industry.longDescription}</p>
           </FadeIn>
-          <div className="flex flex-col gap-10">
-            <FadeIn delay={0.1}>
-              <SectionLabel>Services for {industry.title}</SectionLabel>
-              <ul className="mt-4 flex flex-col gap-3">
-                {industry.services.map((s) => (
-                  <li key={s} className="flex items-center gap-3 text-muted body-md">
-                    <span className="w-4 h-px bg-green shrink-0" />
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </FadeIn>
-          </div>
+          <FadeIn delay={0.1}>
+            <SectionLabel>Services for {industry.title}</SectionLabel>
+            <h2 className="display-subtitle font-display font-bold text-charcoal mt-3 mb-6">What we produce</h2>
+            <ul className="flex flex-col gap-3">
+              {industry.services.map((s) => (
+                <li key={s} className="flex items-center gap-3 text-steel body-md border-b border-border py-3 last:border-0">
+                  <span className="w-4 h-px bg-navy/30 shrink-0" />
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </FadeIn>
         </div>
       </section>
 
-      <section className="page-section bg-paper">
-        <div className="site-shell grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="page-section bg-ivory">
+        <div className="site-shell grid grid-cols-1 md:grid-cols-2 gap-8">
           <FadeIn>
-            <SectionLabel>Common Challenges</SectionLabel>
-            <ul className="mt-6 flex flex-col gap-4">
+            <SectionLabel>Challenges We Solve</SectionLabel>
+            <ul className="mt-6 flex flex-col gap-3">
               {industry.challenges.map((c) => (
-                <li key={c} className="flex items-start gap-4 p-5 border border-border">
-                  <span className="mt-1 w-5 h-5 rounded-full bg-surface flex items-center justify-center shrink-0">
-                    <span className="w-1.5 h-1.5 rounded-full bg-muted" />
+                <li key={c} className="flex items-start gap-3 p-5 bg-surface border border-border">
+                  <span className="mt-1 w-4 h-4 rounded-full bg-steel/10 flex items-center justify-center shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-steel/50" />
                   </span>
-                  <p className="text-sm text-ink">{c}</p>
+                  <p className="text-sm text-charcoal">{c}</p>
                 </li>
               ))}
             </ul>
           </FadeIn>
           <FadeIn delay={0.1}>
             <SectionLabel>How We Solve Them</SectionLabel>
-            <ul className="mt-6 flex flex-col gap-4">
+            <ul className="mt-6 flex flex-col gap-3">
               {industry.solutions.map((s) => (
-                <li key={s} className="flex items-start gap-4 p-5 border border-green/20 bg-green/5">
-                  <span className="mt-1 w-5 h-5 rounded-full bg-green/20 flex items-center justify-center shrink-0">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green" />
+                <li key={s} className="flex items-start gap-3 p-5 bg-navy-light border border-navy/10">
+                  <span className="mt-1 w-4 h-4 rounded-full bg-navy/20 flex items-center justify-center shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-navy" />
                   </span>
-                  <p className="text-sm text-ink">{s}</p>
+                  <p className="text-sm text-charcoal">{s}</p>
                 </li>
               ))}
             </ul>

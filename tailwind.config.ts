@@ -9,24 +9,47 @@ const config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0C0C0C",
-        paper: "#FAFAF8",
-        surface: "#F0EDE8",
-        border: "#E2DFD9",
-        muted: "#737373",
-        green: "#1E3A2A",
-        "green-hover": "#295039",
-        cream: "#F6F1E8",
+        navy: "#0D2137",
+        "navy-mid": "#1A3A5C",
+        "navy-light": "#E8EEF6",
+        ivory: "#F5F2EB",
+        paper: "#FDFCF9",
+        surface: "#EDE9E0",
+        charcoal: "#1C1C2E",
+        steel: "#64748B",
+        gold: "#C8902E",
+        "gold-light": "#F5E6C8",
+        border: "#DDD9CE",
+        ink: "#0D2137",
+        muted: "#64748B",
+        green: "#1B5E3B",
+        "green-hover": "#245246",
+        cream: "#F0EBE0",
       },
       fontFamily: {
         display: ["var(--font-playfair)", "serif"],
         sans: ["var(--font-dm-sans)", "sans-serif"],
       },
       boxShadow: {
-        card: "0 24px 60px rgba(12, 12, 12, 0.08)",
+        card: "0 8px 32px rgba(13, 33, 55, 0.10)",
+        "card-hover": "0 16px 48px rgba(13, 33, 55, 0.16)",
       },
       maxWidth: {
         site: "1280px",
+      },
+      animation: {
+        "marquee": "marquee 30s linear infinite",
+        "marquee2": "marquee2 30s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
     },
   },
