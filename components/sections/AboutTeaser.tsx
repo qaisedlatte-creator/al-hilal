@@ -17,7 +17,7 @@ export default function AboutTeaser() {
                 letterSpacing: "-0.03em",
               }}
             >
-              {COMPANY.years} Years of
+              Est. {COMPANY.established}
               <br />
               Print Authority
               <br />

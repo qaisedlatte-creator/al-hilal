@@ -23,20 +23,20 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${COMPANY.name} | Premium Print Production, Sharjah UAE`,
+    default: `${COMPANY.name} | Printing & Advertising, Sharjah UAE`,
     template: `%s | ${COMPANY.name}`,
   },
   description:
-    "25+ years of premium offset printing, digital printing, large format, corporate gifts, uniforms and signage. Serving the Gulf's most demanding businesses from Sharjah, UAE.",
+    "Offset printing, digital printing, corporate gifts, rubber stamps, and signage in Sharjah, UAE. Based in Al Ghuwair since 1999. Call +971 50 9454953.",
   keywords: [
     "printing company Sharjah",
     "offset printing UAE",
-    "digital printing Dubai",
-    "large format printing",
+    "digital printing Sharjah",
     "corporate gifts UAE",
-    "advertising printing Sharjah",
-    "print company Gulf",
-    "Al Hilal printing",
+    "rubber stamps Sharjah",
+    "advertising signage UAE",
+    "Al Hilal printing Sharjah",
+    "print shop Al Ghuwair",
   ],
   openGraph: {
     type: "website",

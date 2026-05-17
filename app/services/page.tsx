@@ -1,76 +1,98 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { services } from "@/lib/data/services";
 import SectionLabel from "@/components/ui/SectionLabel";
 import FadeIn, { StaggerContainer, StaggerItem } from "@/components/animations/FadeIn";
 import HomeCTA from "@/components/sections/HomeCTA";
 
 export const metadata: Metadata = {
-  title: "Print & Advertising Services | Al Hilal, Sharjah UAE",
+  title: "Printing & Advertising Services | Al Hilal, Sharjah UAE",
   description:
-    "Seven professional print and advertising services: offset printing, digital printing, large format, corporate gifts, uniforms, rubber stamps, and signage. Sharjah, UAE.",
+    "Offset printing, digital printing, corporate gifts, rubber stamps, and signage. Sharjah, UAE. Call +971 50 9454953.",
   alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-ivory pt-32 pb-16 md:pt-40 md:pb-20">
+      <section className="bg-ivory pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="site-shell">
           <FadeIn>
             <SectionLabel>Our Services</SectionLabel>
             <h1 className="display-hero font-display font-bold text-charcoal mt-3">
-              Seven ways we
+              What we produce
               <br />
-              <span className="text-navy">produce excellence.</span>
+              <span className="text-navy">in Sharjah.</span>
             </h1>
           </FadeIn>
-          <FadeIn delay={0.1} className="mt-6 max-w-xl">
+          <FadeIn delay={0.1} className="mt-5 max-w-xl">
             <p className="body-large text-steel">
-              From a single rubber stamp to a 40-metre building wrap, from a personalised campaign to
-              a 100,000-unit catalogue run — every project carries the same standard of precision.
+              Offset printing, digital printing, corporate gifts, rubber stamps, and signage —
+              produced from our facility in Al Ghuwair, Sharjah, UAE.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      <section className="bg-ivory pb-20">
-        <div className="site-shell">
-          <StaggerContainer className="flex flex-col">
-            {services.map((service, i) => (
-              <StaggerItem key={service.slug}>
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="group flex flex-col md:flex-row md:items-center gap-5 py-8 border-b border-border hover:bg-paper px-5 -mx-5 transition-colors"
-                >
-                  <span className="font-display font-bold text-navy/10 group-hover:text-navy/20 transition-colors shrink-0 w-12 text-right text-2xl" style={{ letterSpacing: "-0.04em" }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className="flex-1">
-                    <h2 className="font-display font-bold text-xl text-charcoal group-hover:text-navy transition-colors mb-1.5">
-                      {service.title}
-                    </h2>
-                    <p className="text-steel body-md max-w-2xl">{service.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {service.useCases.slice(0, 3).map((uc) => (
-                        <span key={uc} className="text-[11px] font-medium text-steel/70 bg-surface px-2.5 py-1 border border-border">
-                          {uc}
-                        </span>
-                      ))}
+      {/* Services — one section per service with real image */}
+      {services.map((service, i) => (
+        <section key={service.slug} className={`py-12 md:py-16 ${i % 2 === 0 ? "bg-ivory" : "bg-surface"}`}>
+          <div className="site-shell grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+            {/* Image */}
+            <div className={`${i % 2 !== 0 ? "lg:order-2" : ""}`}>
+              <FadeIn direction={i % 2 === 0 ? "right" : "left"}>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-navy/20" />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="px-3 py-1.5 bg-gold text-navy text-[10px] font-bold uppercase tracking-[0.1em]">
+                      {service.shortTitle}
+                    </span>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+
+            {/* Content */}
+            <div className={`${i % 2 !== 0 ? "lg:order-1" : ""}`}>
+              <FadeIn direction={i % 2 === 0 ? "left" : "right"} delay={0.1}>
+                <h2 className="font-display font-bold text-charcoal mb-3" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}>
+                  {service.title}
+                </h2>
+                <p className="text-navy font-medium text-base mb-4">{service.tagline}</p>
+                <p className="text-steel body-md mb-6">{service.description}</p>
+
+                {/* Items grid */}
+                <div className="grid grid-cols-2 gap-2 mb-7">
+                  {service.items.map((item) => (
+                    <div key={item} className="flex items-center gap-2.5 p-3 bg-paper border border-border">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                      <span className="text-[13px] text-charcoal font-medium">{item}</span>
                     </div>
-                  </div>
-                  <div className="shrink-0 flex items-center gap-2 text-sm font-medium text-navy group-hover:gap-4 transition-all">
-                    <span className="whitespace-nowrap">Explore</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
+                  ))}
+                </div>
+
+                <Link
+                  href="/get-a-quote"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-ivory text-sm font-semibold hover:bg-navy-mid transition-colors"
+                >
+                  Quote for {service.shortTitle}
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <path d="M2.5 6.5h8M7 3l3.5 3.5L7 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </Link>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
+              </FadeIn>
+            </div>
+          </div>
+        </section>
+      ))}
 
       <HomeCTA />
     </>
