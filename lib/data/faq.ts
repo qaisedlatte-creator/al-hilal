@@ -11,7 +11,7 @@ export const faqItems: FaqItem[] = [
     category: "general",
     question: "How long has Al Hilal been operating in the UAE?",
     answer:
-      "Al Hilal Printing & Advertising was established in 1999, making us one of Sharjah's most experienced print and advertising production companies. Over 25 years, we have served over a thousand clients across hospitality, retail, construction, healthcare, and corporate sectors throughout the UAE and wider Gulf region.",
+      "Al Hilal Printing & Advertising was established in 1993, making us one of Sharjah's most experienced print and advertising production companies. Over 30 years, we have served over a thousand clients across hospitality, retail, construction, healthcare, and corporate sectors throughout the UAE and wider Gulf region.",
   },
   {
     id: "general-2",

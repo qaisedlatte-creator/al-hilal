@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: `%s | ${COMPANY.name}`,
   },
   description:
-    "Offset printing, digital printing, corporate gifts, rubber stamps, and signage in Sharjah, UAE. Based in Al Ghuwair since 1999. Call +971 50 9454953.",
+    "Offset printing, digital printing, corporate gifts, rubber stamps, and signage in Sharjah, UAE. Based in Al Ghuwair since 1993. Call +971 50 9454953.",
   keywords: [
     "printing company Sharjah",
     "offset printing UAE",

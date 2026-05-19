@@ -7,9 +7,9 @@ import FadeIn, { StaggerContainer, StaggerItem } from "@/components/animations/F
 import HomeCTA from "@/components/sections/HomeCTA";
 
 export const metadata: Metadata = {
-  title: "About Al Hilal | Printing & Advertising, Sharjah UAE Since 1999",
+  title: "About Al Hilal | Printing & Advertising, Sharjah UAE Since 1993",
   description:
-    "Al Hilal Printing & Advertising has been producing offset printing, digital printing, corporate gifts, stamps and signage from Sharjah, UAE since 1999.",
+    "Al Hilal Printing & Advertising has been producing offset printing, digital printing, corporate gifts, stamps and signage from Sharjah, UAE since 1993.",
   alternates: { canonical: "/about" },
 };
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
             <h1 className="display-hero font-display font-bold text-charcoal mt-3">
               Printing &amp; Branding
               <br />
-              <span className="text-navy">since 1999.</span>
+              <span className="text-navy">since 1993.</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -46,14 +46,14 @@ export default function AboutPage() {
             </div>
             <div>
               <p className="font-display font-bold text-ivory text-xl">AL HILAL</p>
-              <p className="text-[10px] uppercase tracking-[0.16em] text-ivory/40 mt-0.5">Print Press · Sharjah, UAE · Est. 1999</p>
+              <p className="text-[10px] uppercase tracking-[0.16em] text-ivory/40 mt-0.5">Print Press · Sharjah, UAE · Est. 1993</p>
             </div>
           </div>
           <div className="hidden sm:block w-px h-10 bg-ivory/10 ml-4" />
           <div className="flex gap-6 sm:ml-4">
             <div>
               <p className="font-display font-bold text-gold text-xl">Est.</p>
-              <p className="font-display font-bold text-ivory text-2xl -mt-1">1999</p>
+              <p className="font-display font-bold text-ivory text-2xl -mt-1">1993</p>
             </div>
             <div className="w-px h-10 bg-ivory/10" />
             <div className="flex flex-col gap-1">

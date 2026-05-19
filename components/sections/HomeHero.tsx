@@ -76,7 +76,7 @@ export default function HomeHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
         >
-          Based in Sharjah since 1999. Offset printing, digital printing, large format,
+          Based in Sharjah since 1993. Offset printing, digital printing, large format,
           corporate gifts, rubber stamps, and advertising production — from one production house.
         </motion.p>
 
@@ -122,7 +122,7 @@ export default function HomeHero() {
           <div className="flex items-center gap-2.5">
             <span className="font-display font-bold text-gold text-xl">Est.</span>
             <div>
-              <span className="font-display font-bold text-white text-xl">1999</span>
+              <span className="font-display font-bold text-white text-xl">1993</span>
               <p className="text-[10px] text-white/40 uppercase tracking-[0.1em] mt-0.5">Sharjah, UAE</p>
             </div>
           </div>

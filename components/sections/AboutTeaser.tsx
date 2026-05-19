@@ -29,7 +29,7 @@ export default function AboutTeaser() {
           <FadeIn direction="left" delay={0.15}>
             <div className="flex flex-col gap-5">
               <p className="body-large text-muted">
-                Since 1999, Al Hilal has been the production backbone for some of the Gulf&rsquo;s most
+                Since 1993, Al Hilal has been the production backbone for some of the Gulf&rsquo;s most
                 recognisable brands — delivering consistent, precision print work across offset,
                 digital, large format, signage, corporate gifts, uniforms, and stamps.
               </p>

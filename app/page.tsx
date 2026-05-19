@@ -10,7 +10,7 @@ import HomeCTA from "@/components/sections/HomeCTA";
 export const metadata: Metadata = {
   title: "Al Hilal Printing & Advertising | Sharjah, UAE",
   description:
-    "Offset printing, digital printing, corporate gifts, rubber stamps, and signage production. Based in Sharjah, UAE since 1999. Call +971 50 9454953.",
+    "Offset printing, digital printing, corporate gifts, rubber stamps, and signage production. Based in Sharjah, UAE since 1993. Call +971 50 9454953.",
   alternates: { canonical: "/" },
 };
 
