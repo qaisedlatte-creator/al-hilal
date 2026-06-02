@@ -35,12 +35,12 @@ export default function HomeHero() {
           className="flex items-center gap-3 mb-9"
         >
           <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white/25">
-            <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" priority />
+            <Image src="/logo.png" alt="Al Hilal Printing & Advertising" fill className="object-contain" priority />
           </div>
           <div>
             <span className="font-display font-bold text-white text-sm tracking-tight">AL HILAL</span>
             <span className="text-[9px] uppercase tracking-[0.16em] text-white/40 block mt-0.5">
-              Printing &amp; Branding · Sharjah, UAE
+              Printing &amp; Advertising · Sharjah, UAE
             </span>
           </div>
         </motion.div>
@@ -53,7 +53,7 @@ export default function HomeHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
         >
-          Printing &amp; Branding
+          Printing &amp; Advertising
           <br />
           <span className="text-gold">for Sharjah &amp; UAE</span>
         </motion.h1>

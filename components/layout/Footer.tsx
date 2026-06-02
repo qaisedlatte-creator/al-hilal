@@ -37,11 +37,11 @@ export default function Footer() {
       <div className="site-shell pt-14 pb-10 border-b border-white/10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
         <div className="flex items-center gap-4">
           <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
-            <Image src="/logo.jpg" alt="Al Hilal Print & Branding" fill className="object-cover" />
+            <Image src="/logo.png" alt="Al Hilal Printing & Advertising" fill className="object-contain" />
           </div>
           <div>
             <p className="font-display font-bold text-white text-xl tracking-tight">AL HILAL</p>
-            <p className="text-[10px] uppercase tracking-[0.16em] text-white/40 mt-0.5">Print &amp; Branding · Est. {COMPANY.established}</p>
+            <p className="text-[10px] uppercase tracking-[0.16em] text-white/40 mt-0.5">Print &amp; Advertising · Est. {COMPANY.established}</p>
           </div>
         </div>
         <div className="flex flex-col gap-1.5 md:text-right">

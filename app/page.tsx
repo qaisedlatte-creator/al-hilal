@@ -8,9 +8,9 @@ import ProcessTeaser from "@/components/sections/ProcessTeaser";
 import HomeCTA from "@/components/sections/HomeCTA";
 
 export const metadata: Metadata = {
-  title: "Al Hilal Printing & Advertising | Sharjah, UAE",
+  title: "Al Hilal Printing & Advertising | Sharjah UAE Since 1993",
   description:
-    "Offset printing, digital printing, corporate gifts, rubber stamps, and signage production. Based in Sharjah, UAE since 1993. Call +971 50 9454953.",
+    "Sharjah's trusted printing & advertising company since 1993. Offset printing, digital printing, rubber stamps, corporate gifts, large format & signage. Serving Sharjah, Dubai & UAE. Call +971 50 9454953.",
   alternates: { canonical: "/" },
 };
 

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { services } from "@/lib/data/services";
 
-const lastMod = new Date("2025-05-17");
+const lastMod = new Date("2026-06-02");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

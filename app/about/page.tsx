@@ -22,7 +22,7 @@ export default function AboutPage() {
           <FadeIn>
             <SectionLabel>About Us</SectionLabel>
             <h1 className="display-hero font-display font-bold text-charcoal mt-3">
-              Printing &amp; Branding
+              Printing &amp; Advertising
               <br />
               <span className="text-navy">since 1993.</span>
             </h1>
@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="site-shell flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <div className="flex items-center gap-4">
             <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-ivory/20">
-              <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" />
+              <Image src="/logo.png" alt="Al Hilal Printing & Advertising" fill className="object-contain" />
             </div>
             <div>
               <p className="font-display font-bold text-ivory text-xl">AL HILAL</p>
@@ -79,7 +79,7 @@ export default function AboutPage() {
             <p className="body-large text-steel">
               AL HILAL Printing &amp; Advertising is located on Al Arouba Street in Al Ghuwair,
               Sharjah. We have been operating from this location since {COMPANY.established},
-              providing print and branding services to businesses across the UAE.
+              providing print and advertising services to businesses across the UAE.
             </p>
             <p className="body-large text-steel">
               Our production covers offset printing for business stationery and marketing

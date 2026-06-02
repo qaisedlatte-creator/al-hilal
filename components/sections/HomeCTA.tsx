@@ -19,7 +19,7 @@ export default function HomeCTA() {
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
               <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/20">
-                <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" />
+                <Image src="/logo.png" alt="Al Hilal Printing & Advertising" fill className="object-contain" />
               </div>
               <div>
                 <p className="font-display font-bold text-white text-sm">AL HILAL</p>

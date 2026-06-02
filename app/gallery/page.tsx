@@ -35,7 +35,7 @@ export default function GalleryPage() {
           </FadeIn>
           <FadeIn delay={0.1} className="mt-5 max-w-xl">
             <p className="body-large text-steel">
-              A selection of print, branding, signage, and corporate gift work produced from our
+              A selection of print, advertising, signage, and corporate gift work produced from our
               Sharjah facility for clients across the UAE.
             </p>
           </FadeIn>

@@ -3,7 +3,7 @@ export const SITE_URL = "https://www.alhilalprint.com";
 export const COMPANY = {
   name: "Al Hilal Printing & Advertising",
   shortName: "Al Hilal",
-  tagline: "Print & Branding",
+  tagline: "Print & Advertising",
   email: "alhilalsales@gmail.com",
   phone: "+971 50 9454953",
   whatsapp: "+971 50 6790859",

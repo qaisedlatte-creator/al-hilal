@@ -52,14 +52,14 @@ export default function Navigation() {
           {/* Logo — bigger, more premium */}
           <Link href="/" className="flex items-center gap-3.5 shrink-0">
             <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-navy/10 shadow-sm">
-              <Image src="/logo.jpg" alt="Al Hilal Printing & Advertising" fill className="object-cover" priority />
+              <Image src="/logo.png" alt="Al Hilal Printing & Advertising" fill className="object-contain" priority />
             </div>
             <div className="flex flex-col leading-none">
               <span className="font-display font-bold text-navy tracking-tight" style={{ fontSize: "17px", letterSpacing: "-0.02em" }}>
                 AL HILAL
               </span>
               <span className="font-sans text-[9px] uppercase tracking-[0.16em] text-steel mt-0.5">
-                Print &amp; Branding
+                Print &amp; Advertising
               </span>
             </div>
           </Link>
@@ -158,7 +158,7 @@ export default function Navigation() {
             <div className="flex items-center justify-between px-5 border-b border-white/10" style={{ height: "72px" }}>
               <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3">
                 <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/20">
-                  <Image src="/logo.jpg" alt="Al Hilal" fill className="object-cover" />
+                  <Image src="/logo.png" alt="Al Hilal" fill className="object-contain" />
                 </div>
                 <span className="font-display font-bold text-white text-base tracking-tight">AL HILAL</span>
               </Link>

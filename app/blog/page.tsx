@@ -6,7 +6,7 @@ import FadeIn, { StaggerContainer, StaggerItem } from "@/components/animations/F
 export const metadata: Metadata = {
   title: "Print & Production Insights | Al Hilal Blog",
   description:
-    "Expert articles on print production, large format, corporate gifts, branding, and UAE market insights from Al Hilal's production team.",
+    "Expert articles on print production, large format printing, corporate gifts, advertising, and UAE market insights from Al Hilal's production team.",
   alternates: { canonical: "/blog" },
 };
 

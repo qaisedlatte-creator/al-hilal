@@ -68,8 +68,8 @@ export const services: Service[] = [
       "Self-inking, pre-inked, and traditional rubber stamps for offices, businesses, legal, and government use across the UAE.",
     items: ["Self-Inking Stamps", "Pre-Inked Stamps", "Traditional Stamps", "Date Stamps", "Address Stamps", "Company Stamps", "Flash Stamps"],
     image: "/images/services/rubber-stamps.jpg",
-    metaTitle: "Rubber Stamps UAE | Self-Inking & Custom Stamps | Al Hilal",
-    metaDescription: "Custom rubber stamps in UAE. Self-inking, pre-inked, date stamps, company stamps. Same-day production. Sharjah based.",
+    metaTitle: "Rubber Stamps UAE Sharjah | Company Stamp Maker | Al Hilal",
+    metaDescription: "Custom rubber stamps in Sharjah, UAE. Company stamps, self-inking stamps, pre-inked, date stamps, UAE company stamp — same-day production. Call +971 50 9454953.",
   },
   {
     slug: "signage-advertising",
@@ -80,8 +80,8 @@ export const services: Service[] = [
       "Large-format outdoor signage, indoor displays, vehicle graphics, and advertising material production for businesses across UAE.",
     items: ["Outdoor Hoardings", "Indoor Signage", "LED & Backlit Displays", "Vehicle Wraps", "Exhibition Stands", "Wayfinding Systems", "Construction Boards"],
     image: "/images/services/signage.jpg",
-    metaTitle: "Signage & Advertising Production UAE | Al Hilal",
-    metaDescription: "Signage and advertising production for outdoor, indoor, vehicle wraps and exhibitions across UAE. Sharjah based.",
+    metaTitle: "Signage & Advertising Company Sharjah UAE | Al Hilal",
+    metaDescription: "Signage and advertising production in Sharjah UAE — outdoor hoardings, indoor signage, LED displays, vehicle wraps, exhibition stands. Printing and advertising company since 1993.",
   },
 ];
 
