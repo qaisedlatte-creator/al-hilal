@@ -317,6 +317,118 @@ const jsonLd = {
             "@type": "Answer",
             "text": "Al Hilal offers large format printing for hoardings, billboards, outdoor vinyl banners, mesh banners, exhibition graphics, building wraps, wall graphics, and window graphics. All materials are UV-resistant and suitable for UAE outdoor conditions."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does printing cost in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Printing costs in UAE vary by product and quantity. Business cards (350gsm, laminated) start from AED 50–80 for 100 pieces. A4 flyers start from AED 150–250 for 500 copies. Roll-up banners start from AED 150–250. Rubber stamps start from AED 30–80. Corporate gifts such as branded mugs start from AED 25–40 per unit at quantities above 50. Contact Al Hilal Printing & Advertising at +971 50 9454953 for an accurate quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I advertise my business in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most effective advertising options for UAE SMEs include: shopfront signage (your 24/7 advertisement), printed flyers and brochures distributed to offices and residences, outdoor hoardings and banners in high-traffic areas, corporate gifts that keep your brand visible with clients, and exhibition stand graphics for UAE trade shows. Al Hilal Printing & Advertising in Sharjah produces all of these from one facility. Call +971 50 9454953."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a newspaper ad cost in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Newspaper advertising in UAE is expensive compared to print alternatives — a quarter-page ad in a major UAE English daily can cost AED 5,000–20,000 per insertion. For most SMEs, print advertising alternatives such as flyers, brochures, and outdoor signage deliver better ROI. A full run of 5,000 branded flyers costs AED 300–500 and can be targeted to specific locations in Sharjah or Dubai."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services are offered by printing and advertising companies in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A full-service printing and advertising company in UAE offers: offset printing (business cards, brochures, letterheads, catalogues), digital printing (stickers, banners, roll-ups), large format printing (outdoor hoardings, building wraps, exhibition graphics), rubber stamps (self-inking, company stamps, date stamps), corporate gifts (sublimation, engraving, T-shirt printing), and signage (shopfront, indoor, vehicle wraps). Al Hilal Printing & Advertising in Sharjah has been offering all of these services since 1993."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does business card printing take in Sharjah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard business cards (350gsm with lamination) are typically ready in 3–5 working days at most Sharjah print houses. Rush production in 24–48 hours is available at most suppliers including Al Hilal. Digital short-run business cards can sometimes be produced same-day for urgent requirements. Contact Al Hilal at +971 50 9454953 for your specific deadline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is sublimation printing and what can be made with it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sublimation printing uses heat to transfer dye-based inks directly into the surface of polymer-coated materials, creating a print that is part of the material and will not peel, crack, or fade. Products that can be sublimation printed include: ceramic mugs, travel tumblers, photo frames, keyrings, mouse pads, phone cases, coasters, cushion covers, T-shirts (polyester), and canvas panels. It is the most popular process for branded corporate gifts in the UAE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best outdoor advertising material for UAE climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For UAE outdoor advertising, UV-cured inks on PVC or polyester substrates with UV inhibitors are the minimum specification. Solvent-printed vinyl will fade within 12 months under UAE sun exposure. For hoardings and building wraps expected to last 2+ years, specify cast vinyl with UV-resistant overlaminate. All outdoor materials produced by Al Hilal Printing & Advertising are specified for UAE climate conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a company stamp made in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To get a company stamp made in UAE, visit or contact a rubber stamp maker with your company name (in English and/or Arabic), trade licence number, and logo if applicable. A PDF of your trade licence is the easiest way to ensure accuracy. Most Sharjah stamp makers, including Al Hilal Printing & Advertising, can produce a self-inking company stamp same-day for orders placed before noon. Call +971 50 9454953 or WhatsApp +971 50 6790859."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the types of rubber stamps available in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The main types of rubber stamps available in UAE are: self-inking stamps (built-in ink reservoir, most common for office use), pre-inked stamps (sharper impression, preferred for logos and fine detail), traditional rubber stamps (require separate ink pad), date stamps, address stamps, and flash stamps (photopolymer, excellent for Arabic calligraphy). Al Hilal Printing & Advertising in Sharjah produces all stamp types with same-day turnaround."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a roll-up banner cost in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard roll-up banner (85cm x 200cm) with quality hardware and print typically costs AED 150–250 at a reputable UAE supplier. Budget units with basic hardware cost less but do not stand straight and do not survive repeated assembly. For exhibition use requiring multiple events, investing in a mid-range unit (AED 200+) pays off in longevity and professional presentation. Al Hilal produces roll-up banners in Sharjah — call +971 50 9454953 for a quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is the best printing company in Sharjah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al Hilal Printing & Advertising is one of Sharjah's most established printing and advertising companies, operating since 1993. Located on Al Arouba Street in Al Ghuwair, Al Hilal offers offset printing, digital printing, large format printing, rubber stamps, corporate gifts, and signage production from one facility. Clients include Pullman Hotels, Ramada, Pearl Imperial, and businesses across all UAE sectors. Call +971 50 9454953."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is offset printing used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Offset printing is used for high-volume printed materials where consistent colour quality and low per-unit cost are priorities. Common applications include business cards, brochures, flyers, letterheads, envelopes, catalogues, annual reports, calendars, menus, and booklets. Offset printing is the most cost-effective process for quantities above 500–1,000 copies. Al Hilal Printing & Advertising offers offset printing services in Sharjah for UAE businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does signage cost in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Signage costs in UAE vary significantly by type and size. A standard shopfront fascia sign (aluminium composite with vinyl) for a typical retail unit starts from AED 500–1,500. Illuminated LED channel letter signs start from AED 2,000–5,000. A 1m x 2m vinyl banner costs AED 60–120. Vehicle wrap (full) costs AED 2,000–5,000 depending on vehicle size. Contact Al Hilal Printing & Advertising at +971 50 9454953 for an accurate quote for your specific signage requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What corporate gifts are most popular in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most popular corporate gifts in UAE are: branded pens and pen sets, notebooks and planners, ceramic mugs and travel tumblers (sublimation printed), USB drives and tech accessories, canvas bags, T-shirts and polo shirts, and premium leather cardholders and portfolios. For Ramadan and Eid gifting, gift sets combining multiple items in branded packaging are the most common format. Al Hilal Printing & Advertising produces corporate gifts for UAE businesses from Sharjah — call +971 50 9454953."
+          }
         }
       ]
     }

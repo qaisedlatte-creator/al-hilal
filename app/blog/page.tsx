@@ -4,13 +4,53 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import FadeIn, { StaggerContainer, StaggerItem } from "@/components/animations/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Print & Production Insights | Al Hilal Blog",
+  title: "Printing & Advertising Insights | Al Hilal Blog",
   description:
-    "Expert articles on print production, large format printing, corporate gifts, advertising, and UAE market insights from Al Hilal's production team.",
+    "Expert guides on printing and advertising in UAE — rubber stamps, offset printing, digital printing, large format, corporate gifts, signage and advertising from Al Hilal Sharjah.",
   alternates: { canonical: "/blog" },
 };
 
 const posts = [
+  {
+    slug: "how-much-does-printing-cost-in-uae",
+    title: "How Much Does Printing Cost in UAE? (2025 Price Guide)",
+    excerpt: "Realistic price benchmarks for business cards, brochures, banners, rubber stamps, and corporate gifts in the UAE — and what actually affects the price.",
+    category: "Pricing Guide",
+    date: "10 Jun 2025",
+    readTime: "7 min read",
+  },
+  {
+    slug: "rubber-stamp-uae-guide",
+    title: "How to Get a Rubber Stamp Made in UAE — Complete Guide",
+    excerpt: "Types of stamps, what to provide, turnaround times, and where to order rubber stamps in Sharjah and Dubai. Same-day production available.",
+    category: "Rubber Stamps",
+    date: "25 May 2025",
+    readTime: "5 min read",
+  },
+  {
+    slug: "company-stamp-requirements-uae",
+    title: "Company Stamp Requirements in UAE — What Every Business Needs",
+    excerpt: "What information must appear on a UAE company stamp, when you need one, and how to get yours made quickly in Sharjah.",
+    category: "Rubber Stamps",
+    date: "18 May 2025",
+    readTime: "5 min read",
+  },
+  {
+    slug: "how-to-advertise-business-uae",
+    title: "How to Advertise Your Business in UAE — A Practical Guide for SMEs",
+    excerpt: "The most effective advertising options for UAE small and medium businesses — print, signage, corporate gifts, and outdoor — with real cost benchmarks.",
+    category: "Advertising",
+    date: "5 May 2025",
+    readTime: "8 min read",
+  },
+  {
+    slug: "how-to-choose-printing-company-sharjah",
+    title: "How to Choose the Right Printing Company in Sharjah UAE",
+    excerpt: "What separates a reliable print partner from a supplier that will cost you time and credibility — and the questions to ask before you commit.",
+    category: "Production Guide",
+    date: "28 Apr 2025",
+    readTime: "6 min read",
+  },
   {
     slug: "offset-vs-digital-printing-guide",
     title: "Offset vs Digital Printing: How to Choose for Your Next Project",
@@ -18,6 +58,30 @@ const posts = [
     category: "Production Guide",
     date: "12 May 2025",
     readTime: "6 min read",
+  },
+  {
+    slug: "business-card-printing-uae-guide",
+    title: "Business Card Printing in UAE — Sizes, Finishes and What to Specify",
+    excerpt: "Everything you need to know about ordering business cards in UAE — standard sizes, paper stocks, finishes, and how to get cards that make the right impression.",
+    category: "Offset Printing",
+    date: "15 Apr 2025",
+    readTime: "6 min read",
+  },
+  {
+    slug: "sublimation-printing-uae",
+    title: "Sublimation Printing in UAE — What It Is and What You Can Make",
+    excerpt: "How sublimation printing works, which products it works on, and why it's the go-to process for branded corporate gifts in the UAE.",
+    category: "Corporate Gifts",
+    date: "2 Apr 2025",
+    readTime: "5 min read",
+  },
+  {
+    slug: "signage-guide-uae-businesses",
+    title: "Signage for UAE Businesses — Types, Materials and What to Specify",
+    excerpt: "From shopfront signs to outdoor hoardings and vehicle wraps — a complete guide to business signage in UAE with materials, costs and lead times.",
+    category: "Signage",
+    date: "22 Mar 2025",
+    readTime: "7 min read",
   },
   {
     slug: "corporate-gifting-uae-ramadan",
@@ -28,20 +92,84 @@ const posts = [
     readTime: "8 min read",
   },
   {
+    slug: "roll-up-banner-guide-uae",
+    title: "Roll-Up Banners in UAE — Complete Guide for Events and Exhibitions",
+    excerpt: "Sizes, hardware quality, design principles, and how to get the most out of roll-up banners and pop-up displays at UAE events.",
+    category: "Large Format",
+    date: "10 Mar 2025",
+    readTime: "5 min read",
+  },
+  {
+    slug: "t-shirt-printing-uae-guide",
+    title: "T-Shirt and Uniform Printing in UAE — What Businesses Need to Know",
+    excerpt: "Printing methods, fabric choices, minimum quantities, and what to specify for UAE staff uniforms and event merchandise.",
+    category: "Corporate Gifts",
+    date: "25 Feb 2025",
+    readTime: "6 min read",
+  },
+  {
     slug: "large-format-printing-outdoor-uae",
     title: "Why Most Outdoor Graphics Fail in the UAE (And What to Specify Instead)",
-    excerpt: "UV radiation, humidity, and wind loading in the UAE test outdoor graphics harder than almost any other climate. Here's the specification guide your print supplier should know.",
+    excerpt: "UV radiation, humidity, and wind loading in the UAE test outdoor graphics harder than almost any other climate.",
     category: "Large Format",
     date: "18 Feb 2025",
     readTime: "7 min read",
   },
   {
+    slug: "brochure-printing-uae",
+    title: "Brochure Printing in UAE — Formats, Paper Stocks and Finishing Guide",
+    excerpt: "The formats that work, paper weights and finishes that make the right impression, and quantities that make financial sense for UAE businesses.",
+    category: "Offset Printing",
+    date: "10 Feb 2025",
+    readTime: "6 min read",
+  },
+  {
+    slug: "sticker-printing-uae",
+    title: "Sticker Printing in UAE — Types, Materials and What to Order",
+    excerpt: "From vinyl stickers to floor graphics, clear labels, die-cut stickers and one-way vision window vinyl — everything UAE businesses need to know.",
+    category: "Digital Printing",
+    date: "28 Jan 2025",
+    readTime: "5 min read",
+  },
+  {
+    slug: "exhibition-stand-printing-uae",
+    title: "Exhibition Stand Printing in UAE — What to Order Before Your Next Show",
+    excerpt: "What to order, how to brief your printer, and realistic timelines for Gitex, Big 5, Arab Health and other UAE trade shows.",
+    category: "Large Format",
+    date: "20 Jan 2025",
+    readTime: "6 min read",
+  },
+  {
+    slug: "window-graphics-vinyl-uae",
+    title: "Window Graphics and Vinyl Films for UAE Shops",
+    excerpt: "How window graphics, one-way vision vinyl, frosted film, and decorative vinyl are used by UAE retail and commercial businesses.",
+    category: "Signage",
+    date: "12 Jan 2025",
+    readTime: "5 min read",
+  },
+  {
+    slug: "corporate-gifts-buyer-guide-uae",
+    title: "Corporate Gifts in UAE — The Complete Buyer's Guide for 2025",
+    excerpt: "Popular items, quantities, lead times, personalisation options, and how to avoid the most common corporate gifting mistakes in UAE.",
+    category: "Corporate Gifts",
+    date: "8 Jan 2025",
+    readTime: "7 min read",
+  },
+  {
     slug: "artwork-file-preparation-print",
     title: "How to Prepare Print-Ready Artwork Files (The Complete Guide)",
-    excerpt: "Bleed, resolution, colour modes, embedded fonts — a complete guide to setting up your artwork so nothing gets rejected at pre-press and your colours match on press.",
+    excerpt: "Bleed, resolution, colour modes, embedded fonts — a complete guide to setting up your artwork so nothing gets rejected at pre-press.",
     category: "Production Guide",
     date: "5 Jan 2025",
     readTime: "10 min read",
+  },
+  {
+    slug: "printing-advertising-dubai-sharjah",
+    title: "Printing and Advertising Companies in Dubai and Sharjah — What to Look For",
+    excerpt: "How to find and evaluate printing and advertising companies in Dubai and Sharjah UAE — services, pricing, and the right questions to ask.",
+    category: "Advertising",
+    date: "2 Jan 2025",
+    readTime: "6 min read",
   },
 ];
 
@@ -63,7 +191,7 @@ export default function BlogPage() {
           </FadeIn>
           <FadeIn delay={0.15} className="mt-8 max-w-xl">
             <p className="body-large text-muted">
-              Practical guides, industry insights, and production knowledge from 25 years of print and advertising in the UAE.
+              Practical guides and production knowledge from 30+ years of printing and advertising in the UAE. Rubber stamps, offset printing, signage, corporate gifts and more.
             </p>
           </FadeIn>
         </div>
